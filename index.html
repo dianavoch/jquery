@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Calculator</title>
+		<link href="css/style.css" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+		<script type="text/javascript">
+
+			$(document).ready(function(){
+				$('#calc a').click(function(e){
+					if($(this).attr('id')=='AC'){
+						$('.display').text("");
+					}else{
+						var tasta = $(this).text();
+						$('.display').text($('.display').text() + tasta);
+					}
+					
+					return false;
+				})	
+			});
+
+		</script>
+	</head>
+
+	<body>
+		<div id="calc">
+			<div class="display"></div>
+			<div class="buttons">
+				<div class="row">
+					<a id="AC" href="#">AC</a>
+					<a  href="#">+/-</a>
+					<a href="#">%</a>
+					<a id="special" href="#">÷</a>
+				</div>
+				<div class="row">
+					<a href="#">7</a>
+					<a href="#">8</a>
+					<a href="#">9</a>
+					<a id="special" href="#">x</a>
+				</div>
+				<div class="row">
+					<a href="#">4</a>
+					<a href="#">5</a>
+					<a href="#">6</a>
+					<a id="special" href="#">-</a>
+				</div>
+				<div class="row">
+					<a href="#">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a id="special" href="#">+</a>
+				</div>
+				<div class="row">
+					<a id="zero" href="#">0</a>
+					<a href="#">.</a>
+					<a id="egal" href="#">=</a>
+				</div>
+
+			</div>
+		</div>
+		
+	</body>
+</html>
